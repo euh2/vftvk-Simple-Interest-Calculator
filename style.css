@@ -1,4 +1,24 @@
-body {background-color:tan;}
-h1{color:green;}
-
+body {
+  background-color:#010101;
+}
+section#main {
+}
+input {
+  border-color: red;
+}
+#calculator h1 {
+  font-size: 1.4em;
+  color: #4E4E4E;
+}
+#calculator{
+  min-width: 300px;
+  width: 15vw;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: white;
+  border-radius: 9px;
+}
+#principal {
+  width: 100px;
+}
 
