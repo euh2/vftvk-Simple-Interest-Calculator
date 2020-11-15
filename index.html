@@ -41,10 +41,16 @@
         <div class="button">
           <button onclick="compute()">Compute</button>
         </div>
-        <div id="answer" style="display:none;">
-          Interest: <span id="result"></span><br>
+        <div id="answer_wrapper">
+          <div id="answer" style="display:none;">
+            If you deposit <span class="bold_fonts" id="result__principal"></span> at an interest rate of <span
+                                 class="bold_fonts" id="result__rate"></span>%, you will have earned <span
+                                 class="bold_fonts" id="result__earn"></span> in <span id="result__year"></span>.
+            Your total will then be <em><span class="bold_fonts" id="result__total"></span></em>.
+          </div>
         </div>
         </div>
         </section>
+        <footer>&copy; Everyone can get rich</footer>
     </body>
 </html>

@@ -8,6 +8,9 @@ body {
     padding: 60px;
   }
 }
+.bold_fonts {
+  font-weight: 600;
+}
 /* adapted from https://stackoverflow.com/a/7349937/1081510 */
 .table-like {
   display: table;
@@ -89,7 +92,25 @@ div#rate_value::after {
   min-width: 100px;
   margin: 2em auto;
   margin-bottom: 1em;
+  background-color: #eaeaea;
+  padding: 10px;
+  border-radius: 9px;
 }
 #principal {
   /* width: 150px; */
+}
+#answer_wrapper {
+  margin: 5px auto;
+  width: 90%;
+}
+#answer {
+  margin: 1em;
+  padding: 1.5em;
+  background-color: #ffffdb;
+}
+footer {
+  color: white;
+  width: 40%;
+  margin: 0.5em auto;
+  text-align: center;
 }
