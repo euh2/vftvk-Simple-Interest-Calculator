@@ -57,9 +57,15 @@ function CommaFormatted(amount) {
 }
 function compute()
 {
+  el_p = document.getElementById("principal");
     p = document.getElementById("principal").value;
     r = document.getElementById("number_rate").value;
     t = document.getElementById("years").value;
+  if (p <= 0) {
+    alert("Please enter a positive number");
+    el_p.focus();
+    return;
+  }
   resultTotal = p * (1+(r/100*t));
   resultEarn = resultTotal - p;
   var year = new Date().getFullYear();

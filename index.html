@@ -1,5 +1,6 @@
 <html>
     <head>
+      <title>Web App – Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
@@ -18,7 +19,7 @@
           <span>
           <label>Rate</label>
           </span>
-          <input type="range" id="slider_rate" step="0.1" value="3.5" min="0" max="20" list="rate_values"
+          <input type="range" id="slider_rate" step="0.1" value="3.5" min="1" max="20" list="rate_values"
           />
           <datalist id="rate_values">
             <option>0</option>
@@ -28,7 +29,7 @@
             <option>20</option>
           </datalist>
           <span id="number_rate_after">
-            <input type="number" id="number_rate" maxlength="4" step="0.1" value="3.5"  min="0" max="20"  />
+            <input type="number" id="number_rate" maxlength="4" step="0.1" value="3.5"  min="1" max="20"  />
           </span>
         </div>
         <div>
@@ -39,18 +40,23 @@
         </div>
         </div>
         <div class="button">
-          <button onclick="compute()">Compute</button>
+          <button onclick="compute()">Compute Interest</button>
         </div>
         <div id="answer_wrapper">
           <div id="answer" style="display:none;">
-            If you deposit <span class="bold_fonts" id="result__principal"></span> at an interest rate of <span
-                                 class="bold_fonts" id="result__rate"></span>%, you will have earned <span
-                                 class="bold_fonts" id="result__earn"></span> in <span id="result__year"></span>.
-            Your total will then be <em><span class="bold_fonts" id="result__total"></span></em>.
+            If you deposit <mark><span class="bold_fonts" id="result__principal"></span></mark> at an interest rate of <mark><span
+                                                          class="bold_fonts"
+                                                          id="result__rate"></span>%</mark>, you will have earned <mark><span
+                                                          class="bold_fonts"
+                                                          id="result__earn"></span></mark> in
+                                                      <mark><span id="result__year"></span></mark>.
+                                                      Your total will then be <em><mark><span
+                                                          class="bold_fonts"
+                                                          id="result__total"></span></mark></em>.
           </div>
         </div>
         </div>
         </section>
-        <footer>&copy; Everyone can get rich</footer>
+        <footer>&copy; Everyone Can Get Rich</footer>
     </body>
 </html>
