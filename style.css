@@ -1,24 +1,95 @@
 body {
   background-color:#010101;
+  font-family: sans-serif;
+  padding: 60px 20px;
 }
-section#main {
+@media (min-width: 600px) {
+  body {
+    padding: 60px;
+  }
 }
-input {
-  border-color: red;
+/* adapted from https://stackoverflow.com/a/7349937/1081510 */
+.table-like {
+  display: table;
+}
+
+.table-like div {
+  display: table-row;
+  margin-bottom: 24px;
+}
+.table-like div span {
+  display: table-cell;
+  text-align: right;
+  vertical-align: middle;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  min-width: 92px;
+}
+
+/* add borders when debugging */
+.table-like,
+.table-like div span {
+  /* border: 1px solid black; */
+}
+
+::-moz-range-track {
+  background: #d7dcdf;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}
+
+button {
+  float:right;
+}
+div#rate_value {
+  /* display: inline-block; */
+  position: relative;
+}
+div#rate_value::after {
+  position: absolute;
+  top: 2px;
+  right: .5em;
+  transition: all .05s ease-in-out;
+}
+#slider_rate {
+  width: 100%;
+}
+#number_rate {
+  width: 7ch;
+}
+#number_rate_after {
+  display: inline-flex;
+}
+#number_rate_after::after {
+  content: '%';
+}
+.button {
+  width: 88%;
+  display: inline-block;
 }
 #calculator h1 {
   font-size: 1.4em;
   color: #4E4E4E;
+  text-align: center;
 }
 #calculator{
-  min-width: 300px;
+  min-width: 400px;
   width: 15vw;
   margin: 2em auto;
   padding: 1em;
   background-color: white;
   border-radius: 9px;
 }
-#principal {
-  width: 100px;
+#fields {
+  width: 50%;
+  min-width: 100px;
+  margin: 2em auto;
+  margin-bottom: 1em;
 }
-
+#principal {
+  /* width: 150px; */
+}

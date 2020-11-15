@@ -6,16 +6,44 @@
     <body>
         <section id="main">
         <div id="calculator">
-          <h1>Simple Interest Calculator</h1>
+        <h1>Simple Interest Calculator</h1>
+        <div id="fields" class="table-like">
+        <div>
+          <span>
           <label>Amount</label>
-          <input type="number"  id="principal">  <br/>
+          </span>
+          <input type="number" value="1000000"  id="principal">  <br/>
+        </div>
+        <div id="rate_value">
+          <span>
           <label>Rate</label>
-          <input type="range"  id="rate" min="0" step="0.1" max="30">  <br/>
+          </span>
+          <input type="range" id="slider_rate" step="0.1" value="3.5" min="0" max="20" list="rate_values"
+          />
+          <datalist id="rate_values">
+            <option>0</option>
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+          </datalist>
+          <span id="number_rate_after">
+            <input type="number" id="number_rate" maxlength="4" step="0.1" value="3.5"  min="0" max="20"  />
+          </span>
+        </div>
+        <div>
+          <span>
           <label>No. of Years</label>
-          <select id="years"></select>  <br/>
+          </span>
+          <select id="years" value="5"></select>  <br/>
+        </div>
+        </div>
+        <div class="button">
           <button onclick="compute()">Compute</button>
-          Interest : <span id="result"></span><br>
-
+        </div>
+        <div id="answer" style="display:none;">
+          Interest: <span id="result"></span><br>
+        </div>
         </div>
         </section>
     </body>
